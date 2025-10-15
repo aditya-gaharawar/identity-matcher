@@ -12,10 +12,10 @@ export default function Home() {
           <Link href="/">
             <Image
               className="cursor-pointer"
-              src="/assets/logos/logo.svg"
+              src="https://code.webspaceai.in/lovable-uploads/b5556be9-1da8-4fdb-a6b9-969b73491798.png"
               width={250}
               height={250}
-              alt="FIL-B Logo"
+              alt="Identity Matcher Logo"
             />
           </Link>
         </div>
@@ -24,10 +24,10 @@ export default function Home() {
             {/* Main Content */}
             <div className="space-y-4 md:space-y-6 mb-10 md:mb-16">
               <h1 className="font-funnel-display text-3xl md:text-5xl lg:text-7xl font-bold text-black max-w-4xl">
-                We are FIL Builders
+                AI-Powered Identity Verification
               </h1>
               <p className="font-funnel-display text-lg md:text-xl text-gray-500">
-                Cross the Filecoin chasm with us.
+                Blockchain-secured identity matching with advanced facial recognition.
               </p>
             </div>
           </div>
@@ -37,14 +37,19 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-16">
           <div className="flex flex-col md:flex-row items-center justify-between border-t border-gray-200 pt-6 md:pt-8 gap-4 md:gap-0">
             <div className="flex items-center gap-2">
-              <span className="ffont-funnel-display text-gray-900">
-                Welcome to Filecoin Starter Kit
+              <span className="font-funnel-display text-gray-900">
+                Secure Identity Verification Platform
               </span>
             </div>
             <div className="flex flex-col md:flex-row gap-2 md:gap-0 w-full md:w-auto">
-              <Link href="/store" className="w-full md:w-[200px]">
+              <Link href="/admin" className="w-full md:w-[200px]">
                 <div className="w-full md:w-[200px] py-3 text-gray-900 border border-gray-200 hover:border-gray-400 transition-colors text-center font-funnel-display">
-                  Store Data
+                  Admin Panel
+                </div>
+              </Link>
+              <Link href="/verify" className="w-full md:w-[200px]">
+                <div className="w-full md:w-[200px] py-3 bg-blue-600 text-white hover:bg-blue-700 transition-colors text-center font-funnel-display">
+                  Verify Identity
                 </div>
               </Link>
             </div>

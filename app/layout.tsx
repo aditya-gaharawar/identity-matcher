@@ -21,10 +21,10 @@ const funnelSans = Funnel_Sans({
   weight: ["300", "400", "500", "600", "700", "800"],
 });
 
-// Websit Config
+// Website Config
 export const metadata: Metadata = {
-  title: "FIL-B",
-  description: "Made with love by Team FIL-B",
+  title: "Identity Matcher",
+  description: "Blockchain-powered identity verification with AI matching",
 };
 
 export default function RootLayout({

@@ -1,22 +1,50 @@
-export const CONTRACT_ADDRESS = "0xc50dd07ae5CdE4B1bFf213881b87180e22e34A9c";
+export const IDENTITY_CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_IDENTITY_CONTRACT_ADDRESS || "0x0000000000000000000000000000000000000000";
 
-export const CONTRACT_ABI = [
+export const IDENTITY_CONTRACT_ABI = [
 	{
 		"inputs": [],
-		"name": "CID",
+		"name": "admin",
 		"outputs": [
 			{
-				"internalType": "string",
+				"internalType": "address",
 				"name": "",
-				"type": "string"
+				"type": "address"
 			}
 		],
 		"stateMutability": "view",
 		"type": "function"
 	},
 	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "profileId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "hashedUrl",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "ipfsCid",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "matchScore",
+				"type": "uint256"
+			}
+		],
+		"name": "registerIdentity",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
 		"inputs": [],
-		"name": "retrieve",
+		"name": "referenceImagesStorage",
 		"outputs": [
 			{
 				"internalType": "string",
@@ -35,9 +63,101 @@ export const CONTRACT_ABI = [
 				"type": "string"
 			}
 		],
-		"name": "store",
+		"name": "setReferenceImages",
 		"outputs": [],
 		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "user",
+				"type": "address"
+			}
+		],
+		"name": "getIdentity",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "profileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "hashedUrl",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "ipfsCid",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "matchScore",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct IdentityRegistry.Identity",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "profileId",
+				"type": "uint256"
+			}
+		],
+		"name": "getIdentityByProfile",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "profileId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "hashedUrl",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "ipfsCid",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "matchScore",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct IdentityRegistry.Identity",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
 		"type": "function"
 	}
 ]

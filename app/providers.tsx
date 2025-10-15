@@ -12,7 +12,7 @@ import { http } from "wagmi";
 const queryClient = new QueryClient();
 
 const config = getDefaultConfig({
-  appName: "Filecoin Starter Kit",
+  appName: "Identity Matcher",
   projectId: process.env.NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID!,
   chains: [
     filecoinCalibration
