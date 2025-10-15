@@ -10,7 +10,7 @@ const Header = () => {
         <Link href="/">
           <Image
             className="cursor-pointer hidden lg:block"
-            src="/assets/logos/lightLogo.svg"
+            src="https://preview--visual-display-web.lovable.app/assets/abstract-gradient-BGb0D5lM.png"
             width={150}
             height={150}
             alt="Randamu Logo"
@@ -20,7 +20,7 @@ const Header = () => {
           >
             <Image
               className="cursor-pointer "
-              src="/assets/logos/lightLogo.svg"
+              src="https://preview--visual-display-web.lovable.app/assets/abstract-gradient-BGb0D5lM.png"
               width={150}
               height={150}
               alt="Randamu Logo"
